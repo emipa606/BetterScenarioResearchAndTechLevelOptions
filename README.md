@@ -1,4 +1,4 @@
-# [Better Scenario Research and Tech Level Options (Continued)]()
+# [Better Scenario Research and Tech Level Options (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3585170927)
 
 ![Image](https://i.postimg.cc/1X4HT06h/Info.png)
 
@@ -9,10 +9,6 @@ Update of large morons mod https://steamcommunity.com/sharedfiles/filedetails/?i
 ![Image](https://i.postimg.cc/8csH3dWV/Notice.png)
 	
 ![Image](https://i.postimg.cc/hvhrw8xB/Original-Description.png)
-
-effectively abandoned. i don't play rimworld anymore. won't be updated for 1.5, aside from changing the about so the game doesn't yell at you about outdated mods. whenever i get around to doing that.
-
-note from the comments below, setting Industrial or higher will automatically unlock all anomaly-related research. stinky but what are ya gonna do. what you're gonna do is commission your own version of the mod that doesn't do that, because it's not my concern anymore. 
 
 #  Description: 
 
@@ -70,4 +66,6 @@ An alternative to Arcane Technology, [I Can't Fix That](https://steamcommunity.c
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/BetterScenarioResearchAndTechLevelOptions?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585170927) | tags:  starting research

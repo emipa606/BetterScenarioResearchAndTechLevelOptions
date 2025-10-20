@@ -28,6 +28,11 @@ public class ScenPart_SetTechLevel : ScenPart
                 continue;
             }
 
+            if (ModsConfig.AnomalyActive && researchProjectDef.knowledgeCost > 0)
+            {
+                continue;
+            }
+
             if (techLevel == TechLevel.Archotech || (int)researchProjectDef.techLevel < (int)techLevel)
             {
                 Find.ResearchManager.FinishProject(researchProjectDef);

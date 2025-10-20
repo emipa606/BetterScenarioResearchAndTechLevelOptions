@@ -1,5 +1,8 @@
 # Changelog for BetterScenarioResearchAndTechLevelOptions
 
+1.6.1 - Should not unlock mod-added anomaly research either
+
+
 1.6.0 - First publish
 Used DeepL to update translations for ChineseSimplified, French, German
 
