@@ -1,14 +1,14 @@
 # [Better Scenario Research and Tech Level Options (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3585170927)
 
-![Image](https://i.postimg.cc/1X4HT06h/Info.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of large morons mod https://steamcommunity.com/sharedfiles/filedetails/?id=2870637532
 
 - Anomaly research should no longer be unlocked when selecting Industrial or higher
 
-![Image](https://i.postimg.cc/8csH3dWV/Notice.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.postimg.cc/hvhrw8xB/Original-Description.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 #  Description: 
 
@@ -54,7 +54,7 @@ If any of these interest you please make sure to click these links and read thei
 
 An alternative to Arcane Technology, [I Can't Fix That](https://steamcommunity.com/sharedfiles/filedetails/?id=2780971535) allows you to use items, equipment, and buildings above your tech level,
 
-![Image](https://i.postimg.cc/x8qR7GH9/Reporting-Issues.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
@@ -68,4 +68,4 @@ An alternative to Arcane Technology, [I Can't Fix That](https://steamcommunity.c
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/BetterScenarioResearchAndTechLevelOptions?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585170927) | tags:  starting research
+[![Image](https://img.shields.io/github/v/release/emipa606/BetterScenarioResearchAndTechLevelOptions?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585170927) | tags: starting research

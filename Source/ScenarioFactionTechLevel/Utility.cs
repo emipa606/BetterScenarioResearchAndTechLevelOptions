@@ -21,11 +21,11 @@ public static class Utility
 
     private static Dictionary<FactionDef, TechLevel> FactionTechDict { get; }
 
-    public static void EraseChanges()
+    public static void EraseChanges(FactionDef exceptFaction = null)
     {
         foreach (var item in DefDatabase<FactionDef>.AllDefsListForReading)
         {
-            if (item.isPlayer)
+            if (item.isPlayer && item != exceptFaction)
             {
                 item.techLevel = FactionTechDict.TryGetValue(item);
             }

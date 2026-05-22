@@ -7,7 +7,7 @@ namespace ScenarioFactionTechLevel;
 
 public class ScenPart_SetTechLevel : ScenPart
 {
-    private TechLevel techLevel;
+    private TechLevel techLevel = TechLevel.Neolithic;
 
     private static GameComponent_ScenarioFactionTechLevel GameComponentScenarioFactionTechLevel =>
         Current.Game.GetComponent<GameComponent_ScenarioFactionTechLevel>();
@@ -48,7 +48,7 @@ public class ScenPart_SetTechLevel : ScenPart
         }
 
         FloatMenuUtility.MakeMenu(from TechLevel x in Enum.GetValues(typeof(TechLevel))
-            where x != TechLevel.Undefined && x != TechLevel.Animal
+            where x != TechLevel.Undefined
             select x, d => d.ToString(), d => delegate { techLevel = d; });
     }
 
@@ -61,5 +61,9 @@ public class ScenPart_SetTechLevel : ScenPart
     {
         base.ExposeData();
         Scribe_Values.Look(ref techLevel, "techLevel");
+        if (Scribe.mode == LoadSaveMode.PostLoadInit && techLevel == TechLevel.Undefined)
+        {
+            techLevel = TechLevel.Neolithic;
+        }
     }
 }

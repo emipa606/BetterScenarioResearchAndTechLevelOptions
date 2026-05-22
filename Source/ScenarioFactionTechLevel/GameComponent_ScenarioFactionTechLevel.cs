@@ -27,10 +27,11 @@ public class GameComponent_ScenarioFactionTechLevel : GameComponent
 
     public override void LoadedGame()
     {
-        Utility.EraseChanges();
-        if (techLevel != TechLevel.Undefined)
+        var playerFactionDef = Find.FactionManager?.OfPlayer?.def;
+        Utility.EraseChanges(techLevel == TechLevel.Undefined ? playerFactionDef : null);
+        if (techLevel != TechLevel.Undefined && playerFactionDef != null)
         {
-            Find.FactionManager.OfPlayer.def.techLevel = TechLevel;
+            playerFactionDef.techLevel = TechLevel;
         }
     }
 

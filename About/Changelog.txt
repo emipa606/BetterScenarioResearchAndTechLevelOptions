@@ -1,5 +1,8 @@
 # Changelog for BetterScenarioResearchAndTechLevelOptions
 
+1.6.2 - Should no longer revert tech-level on load when using tech-level changing mods like VFE Tribals
+
+
 1.6.1 - Should not unlock mod-added anomaly research either
 
 
