@@ -1,61 +1,36 @@
-# GitHub Copilot Instructions for Better Scenario Research and Tech Level Options (Continued)
+# GitHub Copilot Instructions
 
 ## Mod Overview and Purpose
-The Better Scenario Research and Tech Level Options (Continued) mod aims to enhance gameplay by providing better options for setting your game's starting research and player faction tech level. It's designed to appeal to players who prefer to skip initial Neolithic and Medieval research stages and jump directly to higher tech levels for a more seamless play experience. This mod distinguishes itself by offering the ability to start with completed research projects at specified tech levels, alongside preserving key scenario-specific gameplay elements.
+The **Better Scenario Research and Tech Level Options (Continued)** mod offers enhanced control over starting research and tech levels for players in RimWorld. Originally updated from large moron's mod, this project primarily serves users who want a more tailored, scenario-based research experience, particularly when paired with mods like Semi Random Research. It enables players to omit lower-tier technologies from their game, allowing a more direct advancement to their desired era, such as Industrial or Ultratech.
 
 ## Key Features and Systems
-- **Tech Tier Selection**: Offers 6 scenario options to choose your starting tech level, from Neolithic to Archotech.
-- **Auto-Completion of Research**: Automatically completes all research below the selected tech tier.
-- **Scenario Integrity**: Preserves hidden research specific to game scenarios, ensuring no disruption to unique gameplay elements of scenarios like Crashlanded or Rich Explorer.
-- **Compatibility**: Designed to work seamlessly in your mod load order and flags potential issues to the developers for feedback.
-- **Scenario Editor Integration**: Can be accessed via the Scenario Editor in-game to customize starting tech levels easily.
+- **Tech Level Customization:** Provides six scenario options to start at any desired tech tier, from Neolithic to Archotech. This includes automatically completing all research below the chosen tier.
+- **Archotech Tier Compatibility:** Designed to interact with mods having Archotech-tier research projects like More Archotech Garbage and Science Never Stops.
+- **Scenario Integrity Protection:** Ensures certain hidden research projects remain as per the original scenario settings, protecting theme and gameplay balance.
+- **Flexible Load Order:** The mod's functionality remains constant regardless of its position in the load order. Users are encouraged to report any unforeseen conflicts.
 
 ## Coding Patterns and Conventions
-- **C# Coding Style**: 
-  - Follow standard C# naming conventions with PascalCase for class names and methods.
-  - Use comments judiciously to document the purpose of classes and methods.
-- **Modular Code Structure**: Maintain separation of concerns by organizing classes specific to their functions, such as `GameComponent_ScenarioFactionTechLevel` for tech level settings and utility functions in a dedicated `Utility` class.
+- The C# code is organized into three primary files, each serving a purpose in defining tech level interactions and utility functions.
+  - `ScenPart_SetTechLevel.cs` handles interface edits and game start processes for tech levels.
+  - `Utility.cs` offers supporting functions and structures like `EraseChanges` and `FactionTechDict`.
+  - `GameComponent_ScenarioFactionTechLevel.cs` manages game components associated with tech levels, including load and save functionality.
+- Standard naming conventions are followed for class and method definitions, ensuring clarity and consistency.
 
 ## XML Integration
-- Use RimWorld's XML Defs to integrate scenario options and tech levels into the game's interface.
-- Ensure XML tags are appropriately closed and nested to avoid loading errors.
-- Preserve mod compatibility by referencing existing defs rather than overwriting them.
+- XML files play a crucial role in defining scenario parts (`ScenParts_Various.xml`) and mod metadata (`About.xml`, `LoadFolders.xml`).
+- Use XML to specify scenario definitions and game integration elements that communicate with the C# backend.
 
 ## Harmony Patching
-- Implement Harmony patches where necessary to modify game behavior without altering core game files.
-- Ensure patches are appropriately targeted to methods that require modification, typically using `HarmonyPatch` attributes.
-- Safeguard patches against potential mod conflicts by catching exceptions and logging them for troubleshooting.
+- Although not explicitly mentioned in the summarized content, it's advisable to consider potential Harmony patches for compatibility with other mods or base game alterations.
+- If applicable, use Harmony to patch methods influencing tech level and research completion, ensuring non-intrusive and conflict-free adjustments.
 
 ## Suggestions for Copilot
-- **XML Templates**: Provide Copilot with examples of XML Defs for typical scenario options.
-- **Harmony Examples**: Include samples of basic harmony patches to guide automatic completion of similar patterns.
-- **C# Method Structures**: Offer Copilot templates for class and method declarations to encourage consistent coding practices.
-- **Error Handling Patterns**: Reinforce best practices for error checking and exception handling.
-- **Documentation and Comments**: Encourage descriptive comments that enhance readability and maintainability of the code.
+- **Code Completion:** Suggest relevant defaults for tech level settings and scenario-part additions based on typical RimWorld conventions.
+- **XML Tag Assistance:** Aid in the completion of XML tags for scenario definitions and load ordering.
+- **Harmony Recommendations:** Propose patch entries for methods interacting with game starts and research modifications, particularly if user submissions indicate conflicts.
+- **Error Tracing Enhancement:** Offer snippets for logging and exception handling in scenarios where tech level mismatches or scenario disruptions occur.
 
----
-
-## File Overview
-
-### .NETFramework,Version=v4.8.AssemblyAttributes.cs
-- This file contains assembly-level attributes tied to the .NET framework version used by the mod. No methods or class definitions applicable here.
-
-### GameComponent_ScenarioFactionTechLevel.cs
-- **Class**: `GameComponent_ScenarioFactionTechLevel`
-  - **Method**: `SetTechLevel(TechLevel localTechLevel)`: Configures the game's starting tech level based on scenario settings.
-
-### ScenPart_SetTechLevel.cs
-- **Class**: `ScenPart_SetTechLevel`
-  - No methods explicitly detailed; class is responsible for managing scenario technology level settings.
-
-### Utility.cs
-- **Class**: `Utility`
-  - Acts as a helper class containing static methods for various operations related to tech levels and scenarios.
-
-## Additional Notes
-- When reporting issues, use the provided Discord channel and Log Uploader tool to ensure effective troubleshooting.
-- Experiment with potential mod combinations to confirm compatibility or issues that might arise post-release.
-- For best support and updates, regularly check and contribute to the dedicated GitHub repository.
+By adhering to these guidelines, contributors and automated tooling can ensure consistent quality and functionality within the **Better Scenario Research and Tech Level Options (Continued)** mod, enhancing the player's ability to customize their technological journey within RimWorld.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -64,3 +39,9 @@ The Better Scenario Research and Tech Level Options (Continued) mod aims to enha
 - When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
 - In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
 - For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
+
+
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+

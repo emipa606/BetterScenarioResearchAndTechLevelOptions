@@ -42,7 +42,13 @@ public class ScenPart_SetTechLevel : ScenPart
 
     public override void DoEditInterface(Listing_ScenEdit listing)
     {
-        if (!Widgets.ButtonText(listing.GetScenPartRect(this, RowHeight), techLevel.ToString()))
+        var buttonRect = listing.GetScenPartRect(this, RowHeight);
+        var unlockedTech =
+            Utility.TechLevelUnlocks.Where(pair => pair.Key <= techLevel && pair.Key != TechLevel.Undefined);
+        TooltipHandler.TipRegion(buttonRect,
+            "ScenarioFactionTechLevel.TechTooltip".Translate(unlockedTech.SelectMany(pair => pair.Value).OrderBy(x => x)
+                .ToCommaList()));
+        if (!Widgets.ButtonText(buttonRect, techLevel.ToString()))
         {
             return;
         }
