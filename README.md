@@ -68,4 +68,4 @@ An alternative to Arcane Technology, [I Can't Fix That](https://steamcommunity.c
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/BetterScenarioResearchAndTechLevelOptions?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585170927) | tags: starting research
+[![Image](https://img.shields.io/github/v/release/emipa606/BetterScenarioResearchAndTechLevelOptions?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585170927) | starting research

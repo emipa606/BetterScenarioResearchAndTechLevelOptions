@@ -9,10 +9,10 @@
   <Folder Name="/XML/About/">
     <File Path="../About/about.xml" />
   </Folder>
-  <Folder Name="/XML/1.6/Defs/Scenarios/">
-    <File Path="../1.6/Defs/Scenarios/ScenParts_Various.xml" />
-  </Folder>
   <Folder Name="/XML/Languages/English/Keyed/">
     <File Path="../Languages/English/Keyed/All.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Scenarios/">
+    <File Path="../1.7/Defs/Scenarios/ScenParts_Various.xml" />
   </Folder>
 </Solution>

@@ -1,36 +1,44 @@
-# GitHub Copilot Instructions
+## GitHub Copilot Instructions for RimWorld Mod: Better Scenario Research and Tech Level Options (Continued)
 
-## Mod Overview and Purpose
-The **Better Scenario Research and Tech Level Options (Continued)** mod offers enhanced control over starting research and tech levels for players in RimWorld. Originally updated from large moron's mod, this project primarily serves users who want a more tailored, scenario-based research experience, particularly when paired with mods like Semi Random Research. It enables players to omit lower-tier technologies from their game, allowing a more direct advancement to their desired era, such as Industrial or Ultratech.
+### Mod Overview and Purpose
+The "Better Scenario Research and Tech Level Options" mod enhances RimWorld's scenario options by providing better control over starting research and player faction tech levels. This mod allows players to select the technology tier at which they begin their game, ensuring a customizable and streamlined research experience. It is particularly complementary when used with the "Semi Random Research" mod, allowing players to bypass undesired early era research when starting at higher tech levels.
 
-## Key Features and Systems
-- **Tech Level Customization:** Provides six scenario options to start at any desired tech tier, from Neolithic to Archotech. This includes automatically completing all research below the chosen tier.
-- **Archotech Tier Compatibility:** Designed to interact with mods having Archotech-tier research projects like More Archotech Garbage and Science Never Stops.
-- **Scenario Integrity Protection:** Ensures certain hidden research projects remain as per the original scenario settings, protecting theme and gameplay balance.
-- **Flexible Load Order:** The mod's functionality remains constant regardless of its position in the load order. Users are encouraged to report any unforeseen conflicts.
+### Key Features and Systems
+- **Flexible Starting Tech Levels:** Choose from six scenario options to start your game at any technological tier, from Neolithic to Archotech. Tiers automatically include completed research projects up to the selected level.
+- **Archotech Start:** Begin with all research projects completed, including those from compatible mods like "More Archotech Garbage" for an instant dive into high-tech gameplay.
+- **Scenario Integrity:** Preserves scenario-specific hidden research, maintaining designed gameplay experiences. For example, starting with electricity in scenarios that traditionally include it.
+- **Mod Compatibility:** The mod is designed to fit anywhere in your load order without causing conflicts. Compatibility reports are welcomed for continuous improvement.
 
-## Coding Patterns and Conventions
-- The C# code is organized into three primary files, each serving a purpose in defining tech level interactions and utility functions.
-  - `ScenPart_SetTechLevel.cs` handles interface edits and game start processes for tech levels.
-  - `Utility.cs` offers supporting functions and structures like `EraseChanges` and `FactionTechDict`.
-  - `GameComponent_ScenarioFactionTechLevel.cs` manages game components associated with tech levels, including load and save functionality.
-- Standard naming conventions are followed for class and method definitions, ensuring clarity and consistency.
+### Coding Patterns and Conventions
+- **C# Patterns:** 
+  - All key classes use standard naming conventions with PascalCase for types and methods.
+  - Emphasis on modular design; classes are used to encapsulate different features such as tech level management and interface interaction.
+- **Common Class Functions:**
+  - Methods like `DoEditInterface()` are used for handling UI interactions.
+  - Serialization or data exposure is managed through methods like `ExposeData()`.
 
-## XML Integration
-- XML files play a crucial role in defining scenario parts (`ScenParts_Various.xml`) and mod metadata (`About.xml`, `LoadFolders.xml`).
-- Use XML to specify scenario definitions and game integration elements that communicate with the C# backend.
+### XML Integration
+- XML files define scenario parts, mod metadata, and load order configurations.
+- **ScenPartDef:** Used to specify the elements of scenario customization, facilitating the selection of different tech levels.
 
-## Harmony Patching
-- Although not explicitly mentioned in the summarized content, it's advisable to consider potential Harmony patches for compatibility with other mods or base game alterations.
-- If applicable, use Harmony to patch methods influencing tech level and research completion, ensuring non-intrusive and conflict-free adjustments.
+### Harmony Patching
+- The mod may require harmony patches to ensure compatibility with other mods or to override original game functions where necessary.
+- It is recommended to test thoroughly and apply patches conservatively to maintain stability.
 
-## Suggestions for Copilot
-- **Code Completion:** Suggest relevant defaults for tech level settings and scenario-part additions based on typical RimWorld conventions.
-- **XML Tag Assistance:** Aid in the completion of XML tags for scenario definitions and load ordering.
-- **Harmony Recommendations:** Propose patch entries for methods interacting with game starts and research modifications, particularly if user submissions indicate conflicts.
-- **Error Tracing Enhancement:** Offer snippets for logging and exception handling in scenarios where tech level mismatches or scenario disruptions occur.
+### Suggestions for Copilot
+- **For C# Development:**
+  - Use Copilot to generate boilerplate code for new scenario parts or extensions of existing functionalities.
+  - Leverage Copilot for exploring potential harmony patches, especially with frequently occurring hooks into game logic.
+- **For XML Definitions:**
+  - Enjoy automated suggestions for XML tags and attributes when defining new scenario parts, making setup more efficient.
+  
+### Troubleshooting and Support
+- **Error Isolation:** If you encounter errors, isolate the issue by enabling only this mod and its dependencies. Gradually reintroduce other mods to identify conflicts.
+- **Log Uploading:** Use the Log Uploader tool to share accurate error logs for support.
+- **Community Support:** Direct error reports and solutions to the GitHub repository or designated Discord channels for assistance. Avoid GitHub discussion threads for reporting, as they may not prompt timely notifications.
+- **Mod Sorting:** Utilize tools like RimSort to maintain optimal load order for maximum compatibility. 
 
-By adhering to these guidelines, contributors and automated tooling can ensure consistent quality and functionality within the **Better Scenario Research and Tech Level Options (Continued)** mod, enhancing the player's ability to customize their technological journey within RimWorld.
+By following these guidelines and making use of GitHub Copilot's capabilities, you can optimize development efforts for the "Better Scenario Research and Tech Level Options" mod and enhance player experience in RimWorld.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -44,4 +52,6 @@ By adhering to these guidelines, contributors and automated tooling can ensure c
 ## Hard rules (must follow)
 - Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
 - Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 

@@ -1,5 +1,9 @@
 # Changelog for BetterScenarioResearchAndTechLevelOptions
 
+1.7.0 - Mod updated for 1.7 and passed autotests
+Used DeepL to update translations for German, ChineseSimplified, French
+
+
 1.6.3 - Added tooltip showing unlocked tech for chosen tech-level
 Used DeepL to update translations for ChineseSimplified, French, German
 
